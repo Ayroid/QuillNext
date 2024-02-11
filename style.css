@@ -552,6 +552,7 @@ body {
   background: url(./images/background/contact-background.png);
   background-repeat: no-repeat;
   background-size: contain;
+  background-attachment: fixed;
   background-blend-mode: luminosity;
   background-position: bottom;
   background-color: var(--bgGray);
@@ -681,5 +682,9 @@ body {
 
   .contact-section-main {
     margin-top: 5rem;
+  }
+
+  .copyright-info {
+    justify-content: center;
   }
 }
