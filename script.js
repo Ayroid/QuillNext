@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const observeElements = (elements, animationClass, delay = 1000) => {
+  const observeElements = (
+    elements,
+    animationClass,
+    animationDelay = 0,
+    delay = 1000
+  ) => {
     const options = {
       root: null,
       rootMargin: "0px",
@@ -9,7 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add(animationClass);
+          setTimeout(() => {
+            entry.target.classList.add(animationClass);
+          }, animationDelay);
           setTimeout(() => {
             entry.target.classList.remove("hidden");
           }, delay);
@@ -39,4 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Observe team members
   const teamMembers = document.querySelectorAll(".team-member");
   observeElements(teamMembers, "team-member-animate-up");
+
+  // Observe testimonial
+  const testimonials = document.querySelectorAll("#team-section-article");
+  observeElements(testimonials, "animate-up");
+
+  const testimoniaText = document.querySelectorAll("#team-section-text");
+  observeElements(testimoniaText, "animate-up");
+
+  const partners = document.querySelectorAll(".partners-img");
+  observeElements(partners, "grid-popup", 100);
 });
