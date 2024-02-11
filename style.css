@@ -103,21 +103,6 @@ body {
   }
 }
 
-.home-fade-up {
-  animation: home-fade-up 1.5s ease;
-}
-
-@keyframes home-fade-up {
-  from {
-    opacity: 1;
-    translate: 0 20px;
-  }
-  to {
-    opacity: 1;
-    translate: 0 0;
-  }
-}
-
 /* SECTION WISE CSS */
 
 /* HOME SECTION */
