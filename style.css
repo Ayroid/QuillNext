@@ -72,6 +72,21 @@ body {
   opacity: 0;
 }
 
+.slide-right {
+  animation: slide-right 1.5s ease;
+}
+
+@keyframes slide-right {
+  from {
+    translate: -30px 0;
+    opacity: 0;
+  }
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
 .animate-up {
   animation: fade-up 1s ease;
   animation-delay: 250ms;
