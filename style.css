@@ -1,0 +1,526 @@
+/* FONTS IMPORT */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@900&display=swap");
+
+/* ROOT VARIABLES */
+
+:root {
+  --bgLight: #ffffff;
+  --bgGray: #222327;
+  --bgDark: #161619;
+  --bgCard: #75dab4;
+  --textLight: #ffffff;
+  --textGray: #838383;
+  --textDark: #000000;
+  --lineColor: #535353;
+  --headingFont: "Bebas Neue", sans-serif;
+  --homeFont: "Inter Tight", sans-serif;
+  --bodyFont: "Inter", sans-serif;
+}
+
+/* DEFAULT STYLE */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--bgLight);
+}
+
+/* UTILITY CLASSES */
+
+.full-size {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.background-light {
+  background-color: var(--bgLight);
+  color: var(--textDark);
+}
+
+.background-dark {
+  background-color: var(--bgDark);
+  color: var(--textLight);
+}
+
+.background-gray {
+  background-color: var(--bgGray);
+  color: var(--textLight);
+}
+
+/* SECTION WISE CSS */
+
+/* HOME SECTION */
+
+.homepage {
+  position: relative;
+  background: url(./images/background/home-background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.65);
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  width: 60dvw;
+}
+
+.home-heading {
+  font-family: var(--homeFont);
+  color: var(--textLight);
+  font-size: min(12rem, 20dvw);
+  text-align: center;
+  margin-block: 0;
+  font-weight: 700;
+}
+
+.home-subheading {
+  font-family: var(--bodyFont);
+  color: var(--textLight);
+  font-size: 1.4rem;
+  margin-top: -0.25rem;
+  margin-left: 1rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.home-add-button {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-family: var(--headingFont);
+  color: var(--textLight);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.home-add-text {
+  margin-top: 1.5rem;
+}
+
+.home-add-img {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+.left-nav {
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  height: 100dvh;
+  border-right: 1px solid var(--lineColor);
+  padding-block: 1rem;
+}
+
+.left-nav-img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+.left-nav .logo {
+  filter: invert(1);
+}
+
+.left-nav-text {
+  rotate: -90deg;
+  font-family: var(--headingFont);
+  color: var(--textLight);
+  font-size: 1.2rem;
+}
+
+/* SERVICES */
+
+.services {
+  text-align: center;
+  padding: 10rem 20dvw 15rem 20dvw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.services-heading {
+  font-family: var(--headingFont);
+  text-align: left;
+  letter-spacing: 0.2rem;
+  font-size: min(5rem, 20dvw);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.services-subheading {
+  font-size: 1.25rem;
+  font-family: var(--bodyFont);
+  color: var(--textGray);
+  text-align: left;
+}
+
+.services-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.services-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: min(220px, 80dvw);
+}
+
+.services-card-number {
+  font-family: var(--homeFont);
+  font-size: 2rem;
+  color: #b3b3b38a;
+  margin-bottom: 0;
+}
+
+.services-card-heading {
+  font-family: var(--headingFont);
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  margin-block: -0.75rem;
+}
+
+.services-card-text {
+  text-align: left;
+  font-family: var(--bodyFont);
+  color: var(--textGray);
+}
+
+/* IMAGE SECTION */
+
+.image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-section-img {
+  width: 70dvw;
+  height: 60dvh;
+  background: url(./images/background/happy-coworkers.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -10rem;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    scale: 1.02;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* STATS SECTION */
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7.5rem;
+  padding-bottom: 5rem;
+}
+
+.stats-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: min(220px, 80dvw);
+}
+
+.stats-card-number {
+  font-family: var(--headingFont);
+  font-size: 7.5rem;
+  color: var(--textLight);
+  letter-spacing: 0.25rem;
+  margin-bottom: -1rem;
+}
+
+.stats-card-heading {
+  font-family: var(--bodyFont);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-block: 0rem;
+}
+
+.stats-separator {
+  width: 100%;
+  height: 1px;
+  background-color: var(--lineColor);
+  border: none;
+  margin: 1rem 0 2rem 0;
+}
+
+.stats-card-text {
+  font-family: var(--bodyFont);
+  color: var(--textLight);
+  text-align: center;
+  margin-top: 0;
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+/* SERVICE TWO */
+
+.services-two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.services-two-heading {
+  font-family: var(--headingFont);
+  font-size: min(5rem, 20dvw);
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.services-two-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  padding: 5rem 0;
+}
+
+.services-two-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  padding: 2.5rem 4rem;
+  &:hover {
+    translate: -5px -10px;
+    cursor: pointer;
+    background-color: var(--bgDark);
+    transition: all 0.25s ease;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.services-two-card-heading {
+  font-family: var(--bodyFont);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.services-two-card-img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.services-two-card-text {
+  font-family: var(--bodyFont);
+  color: var(--textGray);
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.6rem;
+}
+
+/* TEAM SECTION */
+
+.team-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+/* TEAM SECTION 1 */
+
+.team-section-one {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 70dvw;
+  gap: 10rem;
+  margin-block: -3rem 10rem;
+}
+
+.team-section-card {
+  padding: 5rem;
+  background-color: var(--bgCard);
+  color: #353535;
+  height: 100%;
+  width: min(350px, 80dvw);
+  min-width: none;
+}
+
+.team-section-card-text {
+  font-family: var(--bodyFont);
+  font-size: 1.5rem;
+  text-align: left;
+  margin-top: 1rem;
+  line-height: 2.5rem;
+}
+
+.team-section-heading {
+  font-family: var(--headingFont);
+  font-size: min(5rem, 20dvw);
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-align: left;
+  width: min(500px, 80dvw);
+}
+
+.team-section-member {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.team-section-member-img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.team-section-member-details {
+  font-family: var(--bodyFont);
+  position: relative;
+}
+
+.team-section-member-name {
+  font-weight: 700;
+}
+
+.team-section-member-role {
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-top: -0.5rem;
+}
+
+.three-dots-img {
+  height: 4rem;
+  margin-left: 3rem;
+}
+
+@media (max-width: 768px) {
+  .team-section-one {
+    width: 80dvw;
+  }
+
+  .team-section-card {
+    padding: 3rem;
+  }
+
+  .team-section-member {
+    justify-content: center;
+  }
+
+  .team-section-card-text {
+    font-size: 1.25rem;
+  }
+
+  .three-dots-img {
+    margin-left: 0;
+  }
+}
+
+/* TEAM SECTION 2 */
+
+.team-section-two {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  height: max-content;
+  width: 70dvw;
+  gap: 10rem;
+  margin-bottom: 5rem;
+}
+
+.team-section-text {
+  font-family: var(--bodyFont);
+  font-size: 1.25rem;
+  text-align: left;
+  margin-top: 1rem;
+  line-height: 2.5rem;
+}
+
+.team-members-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  margin-bottom: -7.5rem;
+  color: var(--textDark);
+  font-family: var(--bodyFont);
+}
+
+.team-member-name {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.team-member-role {
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-top: -0.5rem;
+  color: var(--textGray);
+}
+
+/* PARTNERS */
+
+.partners {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  padding: 5rem 0;
+}
