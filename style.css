@@ -66,6 +66,58 @@ body {
   color: var(--textLight);
 }
 
+/* ANIMATION CLASSES */
+
+.hidden {
+  opacity: 0;
+}
+
+.animate-up {
+  animation: fade-up 1s ease;
+  animation-delay: 250ms;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    translate: 0 30px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.team-member-animate-up {
+  animation: team-fade-up 1s ease;
+}
+
+@keyframes team-fade-up {
+  from {
+    opacity: 0;
+    translate: 0 30px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.home-fade-up {
+  animation: home-fade-up 1.5s ease;
+}
+
+@keyframes home-fade-up {
+  from {
+    opacity: 1;
+    translate: 0 20px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
 /* SECTION WISE CSS */
 
 /* HOME SECTION */
